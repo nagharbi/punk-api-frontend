@@ -8,7 +8,7 @@ export default function BeerCard(props) {
       <Card style={{ width: "18rem" }}>
         <Card.Img
           variant="top"
-          src={props.beer.image_url}
+          src={props.beer.image_url ?? "https://placehold.jp/250x250.png"}
           style={{
             width: "30%",
             marginLeft: "auto",
