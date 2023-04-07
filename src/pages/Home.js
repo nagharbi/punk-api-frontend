@@ -3,7 +3,6 @@ import Header from "../components/Header";
 import Row from "react-bootstrap/Row";
 import BeerCard from "../components/BeerCard";
 import { getAllBeer } from "../services/service";
-import { NavLink } from "react-router-dom";
 
 export default function Home() {
   const [beers, setBeers] = useState([]);
@@ -46,13 +45,7 @@ export default function Home() {
       <div className="container mt-4">
         <Row xs={1} md={3} className="g-4">
           {beers.map((value, index) => (
-            <NavLink
-              key={index}
-              className="text-decoration-none link-dark"
-              to={"/beer/" + value.id}
-            >
-              <BeerCard beer={value} />
-            </NavLink>
+              <BeerCard key={index} beer={value} />
           ))}
         </Row>
       </div>
