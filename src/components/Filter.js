@@ -16,7 +16,7 @@ export default function Filter(props) {
   };
 
   const handleSearch = () => {
-    props.search(filters);
+    props.onSearch(filters);
   };
 
   const handleReset = () => {
@@ -29,7 +29,7 @@ export default function Filter(props) {
     setDataAfter(null);
 
     setFilters(resetFilters);
-    props.reset();
+    props.onReset();
   };
 
   const handleChangeDateBefore = (date) => {
