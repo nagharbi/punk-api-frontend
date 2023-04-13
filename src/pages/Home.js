@@ -53,12 +53,16 @@ export default function Home() {
   };
 
   async function load(numPage) {
-    setLoading(true);
+    if (page === 1) {
+      setLoading(true);
+    }
     const data = await getAllBeer(numPage);
     console.log(data);
     setHasMoreData(data.length > 1);
     setBeers((prevBeers) => [...prevBeers, ...data]);
-    setLoading(false);
+    if (page === 1) {
+      setLoading(false);
+    }
   }
 
   // Ajouter un evenement au momement de scroll
