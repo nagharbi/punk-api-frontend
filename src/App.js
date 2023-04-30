@@ -8,6 +8,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/punk-api-frontend" element={<Home />} />
         <Route path="/beer/:id" element={<Beer />} />
       </Routes>
     </BrowserRouter>
